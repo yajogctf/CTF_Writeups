@@ -13,16 +13,16 @@ Difficulty :  :star:
 ![Copie d'écran](./shattered-memories.png)  
 
 ## Discovery - Analysis
-Nous disposons d'un fichier à analyser. Il faudra utiliser les outils de reverse-engering sans doute pour trouver le flag.  
+We have a file to analyze. We'll probably have to use reverse-engering tools to find the flag.  
 
 ## Soluce
-Pour commencer, j'utilise le logiciel `IDA` en version gratuite (pas la version pro).  
+To start with, I'm using the free version of `IDA` (not the pro version).  
 
-J'ouvre à l'aide d'`IDA` le fichier `shattered-memories` et commence à le parcourir tranquillement pour regarder ce qu'il me propose comme fonctions :  
+Using `IDA`, I open the `shattered-memories` file and start browsing it to see what functions it offers:  
 
 ![Liste des fonctions](./IDA_fonctions.png)  
 
-Je regarde un peu plus attentivement la fonction `main` et parcours un peu la suite :  
+I'll take a closer look at the `main` function and take a look at the rest:  
 
 ![Fonction Main1](./IDA_fonctionMain1.png)  
 
@@ -30,10 +30,10 @@ Je regarde un peu plus attentivement la fonction `main` et parcours un peu la su
 
 ![Fonction Main1](./IDA_fonctionMain3.png)  
 
-Mon regard s'attarde sur une partie contenant les caractères `lactf{no` :  
+My gaze lingers on a section containing the characters `lactf{no` :  
 
 ![Début du flag](./IDA_lactfno.png)  
 
-Il ne reste plus qu'à regarder au-dessus et en-dessous pour récupérer les morceaux du flag trouvé : `t_what_f` ; `t_means}` ; `nd_forge` ; `lactf{no` ; `orgive_a`  
+All that remains is to look above and below to retrieve the pieces of the flag found: `t_what_f`; `t_means}`; `nd_forge`; `lactf{no`; `orgive_a`.  
 
-Il ne reste plus qu'à tout remettre dans l'ordre pour obtenir le flag : `lactf{not_what_forgive_and_forget_means}`
+All that remains is to put everything back in order to obtain the flag: `lactf{not_what_forgive_and_forget_means}`.
