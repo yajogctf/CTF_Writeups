@@ -1,0 +1,2 @@
+target : bim
+code : cat ls *.txt
