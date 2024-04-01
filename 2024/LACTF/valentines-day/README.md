@@ -10,19 +10,19 @@ Difficulty :  :star::star:
 
 > Dowloads : [debut de la clé](./intro.txt) ; [texte chiffré](./ct.txt)  
 
-![Copie d'écran](./valentines-day.png)  
+![Screenshot](./valentines-day.png)  
 
 ## Discovery - Analysis
-Nous disposons de deux fichiers :  
-- Le premier contient le texte chiffré.
-- Le second contient le début du même texte mais cette fois, il est déchiffré.  
+We have two files:  
+- The first contains the encrypted text.
+- The second contains the beginning of the same text, but this time decrypted.  
 
-De plus, l'énoncé nous donne deux indices :  
-- Le texte est chiffré selon la méthode de Vigenère.
-- Le flag est de la forme `lactf{...}` avec des lettres minuscules, des chiffres et des symboles `_` entre les accolades.  
+In addition, the statement gives us two clues:  
+- The text is encrypted using the Vigenère method.
+- The flag is in the form `lactf{...}` with lower-case letters, numbers and `_` symbols between braces.  
 
 ## Soluce
-Le texte chiffré est le suivant :  
+The ciphertext is as follows:  
 ```text
 Br olzy Jnyetbdrc'g xun, V avrkkr gb sssp km frja sbv kvflsffoi Jnuc Sathrg. Wkmk gytjzyakz mj jsqvcmtoh rc bkd. Canjc kns puadlctus!
 
@@ -72,12 +72,12 @@ Sttejt egnsg tm hrikpp obgb mr wzfl T nilg dz cw ac vul yic xfs wszvolh whw wf e
 sfilph: hgwsw://oan.kcrxvx.xsd/x/ipya/oowqcbnu/s2b4md/hc_vddreiwnak_kwwi_rlr_gn35p_wobny/
 ```
 
-Le début du texte déchiffré nous est donné :  
+The beginning of the deciphered text is given:  
 ```text
 On this Valentine's day, I wanted to show my love for professor Paul Eggert. This challenge is dedicated to him. Enjoy the challenge!
 ```
 
-Avant d'exploiter les deux fichiers, commençons par programmer le chiffrement de Vigenère :
+Before exploiting the two files, let's start by programming the Vigenère cipher:
 ```python
 def lettre(c):
     # retourne vrai si c est une lettre non accentuee
@@ -135,32 +135,32 @@ def vigenere(message, cle, crypte):
     return chiffre
 ```
 
-Afin de déterminer le début de la clé de chiffrement, utilisons une propriété du chiffrement de Vigenère :
+To determine the beginning of the encryption key, let's use a property of the Vigenère cipher:
 ```text
-Soit `TextD` un texte déchiffré, `TextC` le texte chiffré obtenu par l'algorithme de Vigenère avec la clé `Key`.  
-Déchiffrer `TextC` **avec comme clé de déchiffrement** `TextD`, on obtient la clé de chiffrement intiale `Key`.
+Let `TextD` be a decrypted text, `TextC` the ciphered text obtained by the Vigenère algorithm with the key `Key`.  
+Decrypt `TextC` **with the decryption key** `TextD`, to obtain the original encryption key `Key`.
 ```
 
-Donc, pour obtenir le début de la clé de chiffrement du texte fourni, on récupère le début du texte chiffré, ainsi que la phrase déchiffrée donnés dans l'énoncé et ensuite procédons ainsi :
+So, to obtain the beginning of the cipher key for the supplied text, we retrieve the beginning of the ciphertext, as well as the decrypted sentence given in the statement and then proceed as follows:
 ```python
 >>> indice_chiffre = """Br olzy Jnyetbdrc'g xun, V avrkkr gb sssp km frja sbv kvflsffoi Jnuc Sathrg. Wkmk gytjzyakz mj jsqvcmtoh rc bkd. Canjc kns puadlctus!"""
 >>> indice_dechiffre = """On this Valentine's day, I wanted to show my love for professor Paul Eggert. This challenge is dedicated to him. Enjoy the challenge!"""
 >>> debut_cle = vigenere(indice_chiffre, indice_dechiffre, False)
 >>> debut_cle = nettoyer_txt(debut_cle)
->>> print("Début de la clé de chiffrement : ", debut_cle)
-Début de la clé de chiffrement :  NevergOnnagiveyouupNevergonnaletyoudownnevergonnarUnarOundanDdesertyounevergonnamakeyoucrYnevergonnasaygoo
+>>> print("Start of encryption key : ", debut_cle)
+Start of encryption key:  NevergOnnagiveyouupNevergonnaletyoudownnevergonnarUnarOundanDdesertyounevergonnamakeyoucrYnevergonnasaygoo
 ```
 
-Au passage, remercions l'auteur pour nous mettre en tête la chanson de Rick Astley ! :D  
+By the way, thanks to the author for putting Rick Astley's song in our heads! :D  
 
-Ensuite, comme nous cherchons un flag, et que ce dernier commence par `lactf{`, il convient de chercher dans le texte chiffré une partie comportant des accolades :  
+Next, since we are looking for a flag, and the flag begins with `lactf{`, we need to search the ciphertext for a part containing braces:  
 
 ```text
 ropgf{qvjal_dfuxaxzbk_gbq_jeci_hdt_nr_hdr_eexij}
 ```
 
-Ici encore, nous connaissons une partie du texte déchiffré : `lactf` qui a été chiffré en `ropgf`.  
-Donc, comme pour obtenir le début de la clé de chiffrement, déterminons ici, quelle partie de cette clé permet le chiffrement du début du flag :
+Here again, we know part of the decrypted text: `lactf`, which has been encrypted as `ropgf`.  
+So, just as we obtained the beginning of the encryption key, let's determine which part of this key enables us to encrypt the beginning of the flag:
 ```python
 >>> lactf_chiffre = "ropgf"
 >>> lactf_dechiffre = "lactf"
@@ -169,17 +169,17 @@ Donc, comme pour obtenir le début de la clé de chiffrement, déterminons ici, 
 Morceau de la clé au début du flag : gonna
 ```
 
-Yesssss !!!!! Avec un peu de chance, `gonna` correspond à une des parties du début de la clé de chiffrement obtenue au début !  
-`gonna` apparait à plusieurs reprise. Tentons donc de déchiffrer le flag avec l'une des partie de la clé commençant par `gonna`.  
+Yesssss !!!!! With a bit of luck, `gonna` corresponds to one of the parts of the beginning of the encryption key obtained at the start!  
+`gonna` appears several times. Let's try to decrypt the flag with one of the parts of the key beginning with `gonna`.  
 
-Le premier essai sera le bon, en prenant comme clé de chiffrement `gonnagiveyouupnevergonnaletyoudownnevergonnarunaroundanddesertyounevergonnamakeyoucrynevergonnasaygoo`, c'est à dire, la clé intialement trouvée privée de ses 5 premiers caractères.
+The first attempt will be the right one, taking as encryption key `gonnagiveyouupnevergonnaletyoudownnevergonnarunaroundanddesertyounevergonnamakeyoucrynevergonnasaygoo`, i.e., the key initially found deprived of its first 5 characters.
 ```python
 >>> debut_cle = debut_cle[5:].lower()
->>> print("Début de clé : ", debut_cle)
-Début de clé :  gonnagiveyouupnevergonnaletyoudownnevergonnarunaroundanddesertyounevergonnamakeyoucrynevergonnasaygoo
+>>> print("Start of encryption key : ", debut_cle)
+Start of encryption key :  gonnagiveyouupnevergonnaletyoudownnevergonnarunaroundanddesertyounevergonnamakeyoucrynevergonnasaygoo
 ```
 
-On déchiffre alors le flag chiffré avec la clé ci-dessus :
+We then decrypt the encrypted flag with the above key:
 ```python
 >>> texte_chiffre = """ropgf{qvjal_dfuxaxzbk_gbq_jeci_hdt_nr_hdr_eexij}"""
 >>> texte_dechiffre = vigenere(texte_chiffre, debut_cle, False)
