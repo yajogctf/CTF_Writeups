@@ -1,0 +1,10 @@
+crypto/faked-onion
+hellopir2
+20 solves / 480 points
+
+Are you as fake as this onion?
+
+nc chal.amt.rs 1414
+
+Downloads
+faked-onion.py

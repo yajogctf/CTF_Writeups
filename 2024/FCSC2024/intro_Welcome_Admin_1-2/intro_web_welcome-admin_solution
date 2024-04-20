@@ -1,0 +1,10 @@
+La requête SQL est
+
+token = os.urandom(16).hex()
+cursor.execute(f"SELECT '{token}' = '{password}'")
+
+où password est la saisie utilisateur.
+
+On saisit 
+' or '1' = '1
+et le tour est joué.
