@@ -21,7 +21,7 @@ Le chiffrement de Vigenère consiste à décaler chaque lettre de la position de
 
 Pour déchiffrer, on procède de la même manière, mais cette fois on décale dans l'autre sens les lettres.  
 
-Pour se faciliter la tâche, on peut faire appel au site dcode.fr ([https://www.dcode.fr/chiffre-vigenere](https://www.dcode.fr/chiffre-vigenere)), à une bibliothèque Python (comme ) ou programmer soi-même une fonction de déchiffrement.  
+Pour se faciliter la tâche, on peut faire appel au site dcode.fr ([https://www.dcode.fr/chiffre-vigenere](https://www.dcode.fr/chiffre-vigenere)), à une bibliothèque Python (comme `pycipher`) ou programmer soi-même une fonction de déchiffrement (comme le fichier [`solve.py`](./solve.py)).  
 
 Ainsi, on trouve :  
 ```python
