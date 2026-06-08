@@ -15,7 +15,7 @@ Mangez cinq fruits et légumes par jour !
 Le Flag est chiffré via un chiffrement AES, chiffrement symétrique. Donc si nous réussissons à déterminer la clé `key`, il est possible de déchiffrer le texte chiffré.  
 
 Pour cela, nous disposons des restes de la division euclidienne de cette clé par cinq nombres(`carotte`, `radis`, `tomate`, `pomme` et `banane`). Or, on peut vérifier que ces cinq nombres sont premiers entre eux deux à deux.  
-Il est donc possible d'applique le théorème des restes chinois pour détemriner la clé. Reste alors à déchiffrer le ciphertext.  
+Il est donc possible d'appliquer le théorème des restes chinois pour détemriner la clé. Reste alors à déchiffrer le ciphertext.  
 
 ## Flag
 
