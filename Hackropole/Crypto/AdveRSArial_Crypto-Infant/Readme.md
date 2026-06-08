@@ -12,9 +12,9 @@ Je viens de suivre un cours sur RSA mais je crois que j’ai oublié quelque cho
 
 ## Elements de réponse
 
-Il s'agit d'un chiffrement RSA avec `n` qui est un nombre premier (habituellement, `n` est le produit de deux nombres prémiers, ce qui rend difficile la calcul de `phi` et donc de `d`, inverse de `e` modulo `phi`).  
+Il s'agit d'un chiffrement RSA avec `n` qui est un nombre premier (habituellement, `n` est le produit de deux nombres premiers, ce qui rend difficile la calcul de `phi` et donc de `d`, inverse de `e` modulo `phi`).  
 
-Ici, `phi` vaut donc `n - 1` et l'inverse de `e` se calcule sans soucis.  
+Ici, `phi` vaut donc `n - 1` puisque `n` est premier et l'inverse de `e` se calcule sans soucis.  
 Il ne reste plus qu'à transformer l'entier obtenuen octet puis en chaine de caractères.  
 
 ## Flag
