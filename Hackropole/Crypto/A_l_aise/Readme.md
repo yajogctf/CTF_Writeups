@@ -25,10 +25,10 @@ Pour se faciliter la tâche, on peut faire appel au site dcode.fr ([https://www.
 
 Ainsi, on trouve :  
 ```python
->>> ct = "Gqfltwj emgj clgfv ! Aqltj rjqhjsksg ekxuaqs, ua xtwk
+>>> ct = '''Gqfltwj emgj clgfv ! Aqltj rjqhjsksg ekxuaqs, ua xtwk
 n'feuguvwb gkwp xwj, ujts f'npxkqvjgw nw tjuwcz
 ugwygjtfkf qz uw efezg sqk gspwonu. Jgsfwb-aqmu f
-Pspygk nj 29 cntnn hqzt dg igtwy fw xtvjg rkkunqf."
+Pspygk nj 29 cntnn hqzt dg igtwy fw xtvjg rkkunqf.'''
 >>> k = "FCSC"
 >>> vigenere_dechiffrer(ct, k)
 Bonjour cher agent ! Votre prochaine mission, si vous
