@@ -30,7 +30,7 @@ n'feuguvwb gkwp xwj, ujts f'npxkqvjgw nw tjuwcz
 ugwygjtfkf qz uw efezg sqk gspwonu. Jgsfwb-aqmu f
 Pspygk nj 29 cntnn hqzt dg igtwy fw xtvjg rkkunqf."
 >>> k = "FCSC"
->>> dechiffrer_vigenere(ct, k)
+>>> vigenere_dechiffrer(ct, k)
 Bonjour cher agent ! Votre prochaine mission, si vous
 l'acceptez bien sur, sera d'infiltrer le reseau
 souterrain ou se cache nos ennemis. Rendez-vous a
