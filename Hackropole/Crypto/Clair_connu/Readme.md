@@ -17,7 +17,7 @@ Il s'agit ici d'un chiffrement par XOR, chiffrement symétrique. Donc, si on dé
 On obeserve que la clé est constitué de 4 octets reproduits à l'identique 20 fois.  
 On va exploiter le fait que $PT XOR KEY = CT <=> PT XOR CT = KEY.  
 Or, on connait 4 octets du texte clair (`FCSC`) dont la longueur est celle de la partie de la clé reproduite. Il suffit donc de faire un XOR entre les 4 premiers octets du texte chiffré et de `FCSC` pour déterminer la partie de la clé reproduite 20 fois.  
-Reste ensuite à déchiffrer le texte chiffré à l'aide de la clé trouvéeprécédemment.  
+Reste ensuite à déchiffrer le texte chiffré à l'aide de la clé trouvée précédemment.  
 
 
 ## Flag
