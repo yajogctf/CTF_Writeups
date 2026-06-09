@@ -19,7 +19,7 @@ Dans la section `Outils`, j'y insère des scripts python qui sont assez classiqu
 - [Carotte Radis Tomates](./Hackropole/Crypto/Carotte_Radis_Tomate) : _intro_ _crypto_ _FCSC2025_
 - [Clair connu](./Hackropole/Crypto/Clair_connu/) : _intro_ _crypto_ _Stream_ _FCSC2021_
 - Crayon Cochon
-- Délog
+- []Délog](./Hackropole/Crypto/Delog/) : _intro_ _crypto_ _Courbe elliptique_ _FCSC2026_
 - [Good AES](./Hackropole/Crypto/Good_AES/) : _intro_ _crypto_ _FCSC2026_
 - Hamac
 - La PIN
