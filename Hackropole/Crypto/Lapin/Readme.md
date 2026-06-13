@@ -18,7 +18,7 @@ La clé étant construite à partir d'un nombre entre 0 et 9999, une recherche p
 
 Pour déchiffrer le texte chiffré, il nous faut donc la clé mais il nous faut également les valeurs de `nonce` et `tag` (voir [https://pycryptodome.readthedocs.io/en/latest/src/cipher/aes.html](https://pycryptodome.readthedocs.io/en/latest/src/cipher/aes.html)).  
 
-Or, en regardant attentivement le code fourni, la valeur fournie dans le fichier `outpout.txt` est la concaténation des variables `nonce` (16 octets), `c` (le texte chiffré) et `tag` (16 octets).  
+Or, en regardant attentivement le code fourni, la valeur fournie dans le fichier `output.txt` est la concaténation des variables `nonce` (16 octets), `c` (le texte chiffré) et `tag` (16 octets).  
 
 Ainsi, on peut donc récupérer le contenu de ces trois éléments puis de les utiliser pour déchiffrer le texte chiffré par force brute sur la valeur de quatre chiffres maximum utilisée pour la clé.  
 
