@@ -22,12 +22,10 @@ Dans la section `Outils`, j'y insère des scripts python qui sont assez classiqu
 - [Délog](./Hackropole/Crypto/Delog/) : _intro_ _crypto_ _Courbe elliptique_ _FCSC2026_
 - [Good AES](./Hackropole/Crypto/Good_AES/) : _intro_ _crypto_ _FCSC2026_
 - [Hamac](./Hackropole/Crypto/Hamac/) : _intro_ _crypto_ _Symétrique_ _FCSC2022_
-- La PIN
+- [La PIN](./Hackropole/Crypto/Lapin/) : _intro_ _crypto_ _Symétrique_ _FCSC2021_
 - Le Rat Conteur
 - Rien à signaler
 - ROT13
 - SMIC (1)
 - SMIC (2)
 - Smölkkey  
-
-
