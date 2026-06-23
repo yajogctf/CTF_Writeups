@@ -24,8 +24,8 @@ Dans la section `Outils`, j'y insère des scripts python qui sont assez classiqu
 - [Hamac](./Hackropole/Crypto/Hamac/) : _intro_ _crypto_ _Symétrique_ _FCSC2022_
 - [La PIN](./Hackropole/Crypto/Lapin/) : _intro_ _crypto_ _Symétrique_ _FCSC2021_
 - [Le Rat Conteur](./Hackropole/Crypto/Le_Rat_Conteur/) : _intro_ _crypto_ _Symétrique_ _FCSC2020_
-- Rien à signaler
-- ROT13
-- SMIC (1)
-- SMIC (2)
-- Smölkkey  
+- [Rien à signaler](./Hackropole/Crypto/Rien_A_Signaler/) : _intro_ _crypto_ _RSA_ _FCSC2024_
+- [ROT13](./Hackropole/Crypto/rot13/) : _intro_ _crypto_ _FCSC2023_
+- [SMIC (1)](./Hackropole/Crypto/smic1/) : 
+- [SMIC (2)](./Hackropole/Crypto/smic2/) : 
+- [Smölkkey](./Hackropole/Crypto/smolkkey/) :   
