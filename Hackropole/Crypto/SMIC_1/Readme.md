@@ -8,7 +8,7 @@ Le chiffrement RSA repose sur l’exponentiation modulaire de grands nombres. En
 
 Le flag est `FCSC{xxxx}` où `xxxx` est remplacé par la valeur de `c` en écriture décimale.  
 
-Une variante de cette épreuve est disponible ici : [SMIC (2)](./Hackropole/Crypto/SMIC_2/).  
+Une variante de cette épreuve est disponible ici : [SMIC (2)](./../SMIC_2/).  
 
 **Auteur : Cryptanalyse**
 
