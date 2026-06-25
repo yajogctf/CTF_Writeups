@@ -28,5 +28,5 @@ Dans la section `Outils`, j'y insère des scripts python qui sont assez classiqu
 - [Rien à signaler](./Hackropole/Crypto/Rien_A_Signaler/) : _intro_ _crypto_ _RSA_ _FCSC2024_
 - [ROT13](./Hackropole/Crypto/ROT13/) : _intro_ _crypto_ _FCSC2023_
 - [SMIC (1)](./Hackropole/Crypto/SMIC_1/) : _intro_ _crypto_ _RSA_ _FCSC2020_
-- [SMIC (2)](./Hackropole/Crypto/SMIC_2/) : 
+- [SMIC (2)](./Hackropole/Crypto/SMIC_2/) : _intro_ _crypto_ _RSA_ _FCSC2020_
 - [Smölkkey](./Hackropole/Crypto/Smolkkey/) :   
